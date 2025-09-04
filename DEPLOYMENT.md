@@ -16,7 +16,14 @@ git push origin main
 4. 在 **Source** 下选择 **GitHub Actions**
 5. 保存设置
 
-### 3. 配置自定义域名（可选）
+### 3. 检查仓库权限设置
+确保GitHub Actions有足够权限：
+1. 在仓库 **Settings** → **Actions** → **General**
+2. 在 **Workflow permissions** 部分选择：
+   - ✅ **Read and write permissions**
+   - ✅ **Allow GitHub Actions to create and approve pull requests**
+
+### 4. 配置自定义域名（可选）
 如果你有自己的域名：
 
 1. 在仓库根目录创建 `CNAME` 文件：
@@ -31,7 +38,7 @@ echo "yourdomain.com" > CNAME
 
 3. 在GitHub Pages设置中启用 **Enforce HTTPS**
 
-### 4. 访问你的网站
+### 5. 访问你的网站
 - GitHub Pages URL: `https://yourusername.github.io/V0LandingPage/`
 - 自定义域名: `https://yourdomain.com`
 
@@ -48,9 +55,18 @@ npx serve out
 ```
 
 ## 问题解决
+
+### 依赖冲突问题
 如果遇到依赖冲突问题：
 - 已移除未使用的 `vaul` 依赖以解决React 19兼容性问题
 - GitHub Actions工作流已配置 `--legacy-peer-deps` 标志作为备用方案
+
+### 权限问题
+如果遇到403权限错误：
+1. 检查仓库设置：**Settings** → **Actions** → **General**
+2. 确保 **Workflow permissions** 设置为 **Read and write permissions**
+3. 确保没有分支保护规则阻止GitHub Actions推送
+4. 新的工作流使用官方GitHub Pages Actions，权限要求更低
 
 ## 注意事项
 - 每次推送到main分支都会自动部署
