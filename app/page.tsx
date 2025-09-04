@@ -645,17 +645,6 @@ export default function BravoZoomLanding() {
                       "Schedule My Consultation"
                     )}
                   </Button>
-                  
-                  <Button 
-                    type="button"
-                    variant="outline"
-                    size="lg" 
-                    className="w-full text-lg py-6 hover:scale-105 transition-all duration-300"
-                    onClick={handleFallbackSubmit}
-                    disabled={isLoading}
-                  >
-                    Send via Email Client
-                  </Button>
                 </div>
               </form>
             </CardContent>
