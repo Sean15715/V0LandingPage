@@ -37,12 +37,20 @@ echo "yourdomain.com" > CNAME
 
 ## 本地测试
 ```bash
+# 安装依赖
+npm install
+
 # 构建静态文件
 npm run build
 
 # 预览构建结果
 npx serve out
 ```
+
+## 问题解决
+如果遇到依赖冲突问题：
+- 已移除未使用的 `vaul` 依赖以解决React 19兼容性问题
+- GitHub Actions工作流已配置 `--legacy-peer-deps` 标志作为备用方案
 
 ## 注意事项
 - 每次推送到main分支都会自动部署
