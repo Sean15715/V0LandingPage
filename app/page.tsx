@@ -112,19 +112,19 @@ export default function BravoZoomLanding() {
             <div className="mb-12 animate-fade-in-up hero-trusted-section" style={{ animationDelay: "0.4s" }}>
               <p className="text-sm text-foreground mb-4 uppercase tracking-wider font-semibold">TRUSTED BY FOUNDERS FROM</p>
               <div className="flex justify-center items-center gap-12 opacity-80 hover:opacity-100 transition-opacity duration-300">
-                {/* Capital Today Logo */}
-                <div className="flex items-center justify-center h-12 company-logo">
-                  <Image src="/capital-today-logo.png" alt="Capital Today" width={140} height={48} className="object-contain opacity-90" />
+                {/* Capital Today Logo - Larger */}
+                <div className="flex items-center justify-center w-40 h-16 company-logo">
+                  <Image src="/capital-today-logo.png" alt="Capital Today" width={160} height={64} className="object-contain opacity-90" />
                 </div>
                 
                 {/* Bessemer Venture Partners Logo */}
-                <div className="flex items-center justify-center h-12 company-logo">
-                  <Image src="/bessemer-venture-partners-logo.png" alt="Bessemer Venture Partners" width={200} height={48} className="object-contain opacity-90" />
+                <div className="flex items-center justify-center w-36 h-14 company-logo">
+                  <Image src="/bessemer-venture-partners-logo.png" alt="Bessemer Venture Partners" width={144} height={56} className="object-contain opacity-90" />
                 </div>
                 
                 {/* a16z Logo */}
-                <div className="flex items-center justify-center h-12 company-logo">
-                  <Image src="/a16z-logo.png" alt="a16z" width={120} height={48} className="object-contain opacity-90" />
+                <div className="flex items-center justify-center w-36 h-14 company-logo">
+                  <Image src="/a16z-logo.png" alt="a16z" width={144} height={56} className="object-contain opacity-90" />
                 </div>
               </div>
             </div>
