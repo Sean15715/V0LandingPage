@@ -56,6 +56,17 @@ npx serve out
 
 ## 问题解决
 
+### 静态资源加载失败 (404错误)
+如果遇到CSS、JS等静态资源加载失败的问题：
+- **原因**: Next.js静态导出时资源路径配置不正确
+- **解决方案**: 已修复 `next.config.mjs` 中的 `assetPrefix` 配置
+- **关键配置**:
+  ```javascript
+  basePath: process.env.NODE_ENV === 'production' ? '/V0LandingPage' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/V0LandingPage' : '',
+  ```
+- **验证**: 构建后的HTML中所有资源路径都应包含 `/V0LandingPage/` 前缀
+
 ### 依赖冲突问题
 如果遇到依赖冲突问题：
 - 已移除未使用的 `vaul` 依赖以解决React 19兼容性问题
