@@ -10,6 +10,7 @@ const inter = Inter({
   display: "swap",
   variable: "--font-inter",
   weight: "variable",
+  preload: true,
 })
 
 export const metadata: Metadata = {
