@@ -369,6 +369,136 @@
   .floating-element {
     animation: float 3s ease-in-out infinite;
   }
+
+  /* Global Connection Network Animations */
+  @keyframes connectionPulse {
+    0%, 100% {
+      opacity: 0.6;
+      stroke-width: 1.5;
+    }
+    50% {
+      opacity: 1;
+      stroke-width: 2.5;
+    }
+  }
+
+  @keyframes connectionFlow {
+    0% {
+      stroke-dasharray: 0 100;
+      stroke-dashoffset: 0;
+    }
+    50% {
+      stroke-dasharray: 50 50;
+      stroke-dashoffset: -25;
+    }
+    100% {
+      stroke-dasharray: 0 100;
+      stroke-dashoffset: -100;
+    }
+  }
+
+  @keyframes connectionGlow {
+    0%, 100% {
+      filter: drop-shadow(0 0 4px rgba(37, 99, 235, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 12px rgba(37, 99, 235, 0.6));
+    }
+  }
+
+  @keyframes dataFlow {
+    0% {
+      opacity: 0;
+      transform: scale(0.5);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+  }
+
+  @keyframes cityPulse {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.3);
+      opacity: 1;
+    }
+  }
+
+  @keyframes networkRipple {
+    0% {
+      transform: scale(0.8);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.4;
+    }
+    100% {
+      transform: scale(1.6);
+      opacity: 0;
+    }
+  }
+
+  /* Connection line animations */
+  .connection-pulse {
+    animation: connectionPulse 3s ease-in-out infinite;
+  }
+
+  .connection-flow {
+    stroke-dasharray: 5 5;
+    animation: connectionFlow 4s linear infinite;
+  }
+
+  .connection-glow {
+    animation: connectionGlow 2s ease-in-out infinite;
+  }
+
+  /* Data flow animations */
+  .data-flow {
+    animation: dataFlow 3s ease-in-out infinite;
+  }
+
+  /* City marker animations */
+  .city-pulse {
+    animation: cityPulse 2s ease-in-out infinite;
+  }
+
+  .network-ripple {
+    animation: networkRipple 3s ease-out infinite;
+  }
+
+  /* Staggered connection animations */
+  .connection-delay-1 { animation-delay: 0.5s; }
+  .connection-delay-2 { animation-delay: 1s; }
+  .connection-delay-3 { animation-delay: 1.5s; }
+  .connection-delay-4 { animation-delay: 2s; }
+  .connection-delay-5 { animation-delay: 2.5s; }
+  .connection-delay-6 { animation-delay: 3s; }
+
+  /* Enhanced global network effects */
+  .global-network {
+    position: relative;
+  }
+
+  .global-network::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 20% 30%, rgba(37, 99, 235, 0.1) 0%, transparent 30%),
+      radial-gradient(circle at 80% 70%, rgba(99, 102, 241, 0.08) 0%, transparent 25%),
+      radial-gradient(circle at 50% 50%, rgba(139, 92, 246, 0.06) 0%, transparent 40%);
+    pointer-events: none;
+    animation: networkRipple 8s ease-in-out infinite;
+  }
 }
 
 /* Adding JavaScript-triggered scroll animations */

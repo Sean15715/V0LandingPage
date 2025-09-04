@@ -28,11 +28,11 @@ export default function BravoZoomLanding() {
         <div className="absolute inset-0 opacity-60">
           {/* US-Asia outline background image */}
           <div
-            className="w-full h-full bg-center bg-no-repeat bg-contain hero-map-outline"
+            className="w-full h-full bg-center bg-no-repeat hero-map-outline"
             style={{
               backgroundImage: "url('/hero-us-china-outline.png')",
-              backgroundSize: "88%",
-              backgroundPosition: "center",
+              backgroundSize: "105% auto",
+              backgroundPosition: "center 70%",
               filter: "brightness(0.9) contrast(1.25)",
             }}
           />
@@ -51,56 +51,277 @@ export default function BravoZoomLanding() {
               style={{ animationDelay: "0.5s" }}
             />
 
-            {/* Connection arc between US and Asia */}
+            {/* Dynamic Global Connection Network */}
             <svg
-              className="absolute inset-0 w-full h-full pointer-events-none"
+              className="absolute inset-0 w-full h-full pointer-events-none global-network"
               viewBox="0 0 100 100"
               preserveAspectRatio="none"
             >
+              {/* Main US-Asia Connection */}
               <path
-                d="M 15 50 Q 50 30 85 50"
+                d="M 15 40 Q 50 20 80 40"
                 stroke="rgb(37 99 235)"
                 strokeWidth="2"
                 fill="none"
-                className="animate-pulse"
+                className="connection-pulse connection-glow"
                 opacity="0.9"
                 filter="drop-shadow(0 0 6px rgba(37, 99, 235, 0.4))"
               />
+              
+              {/* Secondary US-Asia Connection (lower arc) */}
+              <path
+                d="M 15 40 Q 50 60 80 40"
+                stroke="rgb(59 130 246)"
+                strokeWidth="1.5"
+                fill="none"
+                className="connection-flow connection-delay-1"
+                opacity="0.7"
+                filter="drop-shadow(0 0 4px rgba(59, 130, 246, 0.3))"
+              />
+              
+              {/* US to Europe Connection */}
+              <path
+                d="M 15 40 Q 35 10 25 25"
+                stroke="rgb(99 102 241)"
+                strokeWidth="1.5"
+                fill="none"
+                className="connection-pulse connection-delay-2"
+                opacity="0.8"
+                filter="drop-shadow(0 0 5px rgba(99, 102, 241, 0.4))"
+              />
+              
+              
+              {/* Cross-Pacific Connection */}
+              <path
+                d="M 20 35 Q 50 5 75 45"
+                stroke="rgb(37 99 235)"
+                strokeWidth="1"
+                fill="none"
+                className="connection-flow connection-delay-4"
+                opacity="0.6"
+                filter="drop-shadow(0 0 3px rgba(37, 99, 235, 0.2))"
+              />
+              
+              {/* Asia to Middle East Connection */}
+              <path
+                d="M 80 40 Q 70 30 65 35"
+                stroke="rgb(59 130 246)"
+                strokeWidth="1"
+                fill="none"
+                className="connection-pulse connection-delay-5"
+                opacity="0.5"
+                filter="drop-shadow(0 0 3px rgba(59, 130, 246, 0.2))"
+              />
+              
+              {/* Additional regional connections */}
+              <path
+                d="M 25 35 Q 40 25 55 30"
+                stroke="rgb(99 102 241)"
+                strokeWidth="1"
+                fill="none"
+                className="connection-flow connection-delay-6"
+                opacity="0.4"
+                filter="drop-shadow(0 0 2px rgba(99, 102, 241, 0.15))"
+              />
+              
+              <path
+                d="M 70 45 Q 60 50 55 55"
+                stroke="rgb(139 92 246)"
+                strokeWidth="1"
+                fill="none"
+                className="connection-pulse connection-delay-1"
+                opacity="0.4"
+                filter="drop-shadow(0 0 2px rgba(139, 92, 246, 0.15))"
+              />
+              
+              {/* Animated flowing dots along main connection */}
+              <circle
+                r="1"
+                fill="rgb(37 99 235)"
+                opacity="0.8"
+                className="data-flow"
+                filter="drop-shadow(0 0 4px rgba(37, 99, 235, 0.6))"
+              >
+                <animateMotion
+                  dur="4s"
+                  repeatCount="indefinite"
+                  path="M 15 40 Q 50 20 80 40"
+                />
+              </circle>
+              
+              {/* Secondary flowing dots */}
+              <circle
+                r="0.8"
+                fill="rgb(99 102 241)"
+                opacity="0.6"
+                className="data-flow connection-delay-2"
+                filter="drop-shadow(0 0 3px rgba(99, 102, 241, 0.4))"
+              >
+                <animateMotion
+                  dur="5s"
+                  repeatCount="indefinite"
+                  path="M 15 40 Q 50 60 80 40"
+                />
+              </circle>
+              
+              {/* Additional flowing data points */}
+              <circle
+                r="0.6"
+                fill="rgb(139 92 246)"
+                opacity="0.5"
+                className="data-flow connection-delay-3"
+                filter="drop-shadow(0 0 2px rgba(139, 92, 246, 0.3))"
+              >
+                <animateMotion
+                  dur="6s"
+                  repeatCount="indefinite"
+                  path="M 15 40 Q 35 10 25 25"
+                />
+              </circle>
             </svg>
 
-            {/* Additional location markers with updated colors */}
+            {/* Global Connection Points - Major Cities */}
+            
+            {/* Europe - London */}
             <div
-              className="absolute w-2 h-2 bg-blue-400 rounded-full animate-ping opacity-70 shadow-lg shadow-blue-400/30"
+              className="absolute w-3 h-3 bg-indigo-500 rounded-full city-pulse opacity-80 shadow-lg shadow-indigo-500/40"
               style={{
-                top: "42%",
+                top: "25%",
+                left: "25%",
+                animationDelay: "0.8s",
+              }}
+            />
+            <div
+              className="absolute w-6 h-6 bg-indigo-500/20 rounded-full network-ripple shadow-lg shadow-indigo-500/20"
+              style={{
+                top: "calc(25% - 6px)",
+                left: "calc(25% - 6px)",
+                animationDelay: "0.8s",
+              }}
+            />
+            
+            {/* Europe - Berlin */}
+            <div
+              className="absolute w-2 h-2 bg-indigo-400 rounded-full city-pulse opacity-70 shadow-lg shadow-indigo-400/30"
+              style={{
+                top: "30%",
                 left: "30%",
-                animationDelay: "1s",
+                animationDelay: "1.2s",
               }}
             />
+            
+            {/* Middle East - Dubai */}
             <div
-              className="absolute w-1 h-1 bg-blue-300 rounded-full animate-ping opacity-60 shadow-lg shadow-blue-300/30"
+              className="absolute w-2 h-2 bg-blue-500 rounded-full city-pulse opacity-75 shadow-lg shadow-blue-500/35"
               style={{
-                top: "35%",
-                left: "50%",
-                animationDelay: "2s",
+                top: "45%",
+                left: "45%",
+                animationDelay: "1.5s",
+              }}
+            />
+            
+            {/* India - Mumbai */}
+            <div
+              className="absolute w-2.5 h-2.5 bg-blue-600 rounded-full city-pulse opacity-85 shadow-lg shadow-blue-600/40"
+              style={{
+                top: "55%",
+                left: "55%",
+                animationDelay: "1.8s",
               }}
             />
             <div
-              className="absolute w-1 h-1 bg-blue-500 rounded-full animate-ping opacity-80 shadow-lg shadow-blue-500/30"
+              className="absolute w-5 h-5 bg-blue-600/25 rounded-full network-ripple shadow-lg shadow-blue-600/20"
+              style={{
+                top: "calc(55% - 5px)",
+                left: "calc(55% - 5px)",
+                animationDelay: "1.8s",
+              }}
+            />
+            
+            {/* Southeast Asia - Singapore */}
+            <div
+              className="absolute w-2 h-2 bg-purple-500 rounded-full city-pulse opacity-80 shadow-lg shadow-purple-500/35"
+              style={{
+                top: "65%",
+                left: "65%",
+                animationDelay: "2.2s",
+              }}
+            />
+            
+            {/* Australia - Sydney */}
+            <div
+              className="absolute w-2 h-2 bg-purple-600 rounded-full city-pulse opacity-75 shadow-lg shadow-purple-600/30"
+              style={{
+                top: "75%",
+                left: "75%",
+                animationDelay: "2.5s",
+              }}
+            />
+            
+            {/* Japan - Tokyo */}
+            <div
+              className="absolute w-2.5 h-2.5 bg-blue-700 rounded-full city-pulse opacity-90 shadow-lg shadow-blue-700/45"
               style={{
                 top: "40%",
+                left: "80%",
+                animationDelay: "2.8s",
+              }}
+            />
+            <div
+              className="absolute w-5 h-5 bg-blue-700/30 rounded-full network-ripple shadow-lg shadow-blue-700/25"
+              style={{
+                top: "calc(40% - 5px)",
+                left: "calc(80% - 5px)",
+                animationDelay: "2.8s",
+              }}
+            />
+            
+            {/* South Korea - Seoul */}
+            <div
+              className="absolute w-2 h-2 bg-blue-500 rounded-full city-pulse opacity-70 shadow-lg shadow-blue-500/30"
+              style={{
+                top: "35%",
+                left: "75%",
+                animationDelay: "3.1s",
+              }}
+            />
+            
+            {/* Additional smaller connection points */}
+            <div
+              className="absolute w-1 h-1 bg-blue-300 rounded-full city-pulse opacity-60 shadow-lg shadow-blue-300/25"
+              style={{
+                top: "20%",
+                left: "35%",
+                animationDelay: "3.5s",
+              }}
+            />
+            <div
+              className="absolute w-1 h-1 bg-indigo-300 rounded-full city-pulse opacity-55 shadow-lg shadow-indigo-300/20"
+              style={{
+                top: "50%",
+                left: "40%",
+                animationDelay: "3.8s",
+              }}
+            />
+            <div
+              className="absolute w-1 h-1 bg-purple-400 rounded-full city-pulse opacity-65 shadow-lg shadow-purple-400/25"
+              style={{
+                top: "60%",
                 left: "70%",
-                animationDelay: "3s",
+                animationDelay: "4.1s",
               }}
             />
           </div>
         </div>
 
-        {/* Subtle background pattern overlay */}
+        {/* Enhanced background pattern overlay with global network effects */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-r from-blue-100/20 via-transparent to-indigo-100/20" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(59,130,246,0.1),transparent_50%)]" />
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.1),transparent_50%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(37,99,235,0.08),transparent_40%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(139,92,246,0.06),transparent_35%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_20%,rgba(99,102,241,0.05),transparent_30%)]" />
         </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
