@@ -26,7 +26,7 @@ export default function BravoZoomLanding() {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-section bg-white">
         <div className="absolute inset-0 opacity-60">
-          {/* US-China outline background image */}
+          {/* US-Asia outline background image */}
           <div
             className="w-full h-full bg-center bg-no-repeat bg-contain hero-map-outline"
             style={{
@@ -41,7 +41,7 @@ export default function BravoZoomLanding() {
             <div className="absolute top-1/2 left-[15%] w-4 h-4 bg-primary rounded-full animate-ping opacity-80 shadow-lg shadow-primary/30" />
             <div className="absolute top-1/2 left-[15%] w-8 h-8 bg-primary/30 rounded-full animate-pulse shadow-lg shadow-primary/20" />
 
-            {/* China Location Marker */}
+            {/* Asia Location Marker */}
             <div
               className="absolute top-1/2 right-[15%] w-4 h-4 bg-primary rounded-full animate-ping opacity-80 shadow-lg shadow-primary/30"
               style={{ animationDelay: "0.5s" }}
@@ -51,7 +51,7 @@ export default function BravoZoomLanding() {
               style={{ animationDelay: "0.5s" }}
             />
 
-            {/* Connection arc between US and China */}
+            {/* Connection arc between US and Asia */}
             <svg
               className="absolute inset-0 w-full h-full pointer-events-none"
               viewBox="0 0 100 100"
@@ -108,15 +108,15 @@ export default function BravoZoomLanding() {
             <h1 className="text-5xl md:text-7xl font-black mb-6 text-balance animate-fade-in-up">
               The Unfair Hiring Advantage is in{" "}
               <span className="text-primary bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">
-                China
+                Asia
               </span>
             </h1>
             <p
               className="text-xl md:text-2xl text-foreground mb-8 max-w-4xl mx-auto leading-relaxed animate-fade-in-up hero-subtitle"
               style={{ animationDelay: "0.2s" }}
             >
-              Unlock access to China's 9 million+ elite engineering minds—the talent that built titans like TikTok,
-              Alibaba, and Deepseek.
+              Unlock access to Asia's 15 million+ elite engineering minds—the talent that built titans like TikTok,
+              Alibaba, Tencent, Samsung, and SoftBank.
             </p>
 
             {/* Social Proof */}
@@ -170,7 +170,7 @@ export default function BravoZoomLanding() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Hire Better, More Capital-Efficiently</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Don't choose between quality and cost. Our deep network in China gives you access to elite,
+                  Don't choose between quality and cost. Our deep network across Asia gives you access to elite,
                   senior-level engineers—the caliber you'd find in Silicon Valley—at a fraction of the fully-loaded
                   cost. Build a world-class team and make your venture capital go further.
                 </p>
@@ -204,7 +204,7 @@ export default function BravoZoomLanding() {
                 </div>
                 <h3 className="text-xl font-bold mb-4">Hire Globally, With Local Simplicity</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Cross-border hiring is complex. We make it simple. Our optional EOR service handles all the tricky
+                  Cross-border hiring across Asia is complex. We make it simple. Our optional EOR service handles all the tricky
                   payroll, legal, and compliance logistics. So you can enjoy the peace of mind that everything is
                   handled compliantly.
                 </p>
@@ -255,7 +255,7 @@ export default function BravoZoomLanding() {
                   <div>
                     <span className="font-semibold">Prev. Employer:</span>
                     <p className="text-sm text-muted-foreground">
-                      Senior Engineer at Alibaba Cloud (阿里云)
+                      Senior Engineer at Alibaba Cloud (China)
                     </p>
                   </div>
                   <div>
@@ -309,13 +309,13 @@ export default function BravoZoomLanding() {
                   <div>
                     <span className="font-semibold">Prev. Employer:</span>
                     <p className="text-sm text-muted-foreground">
-                      Senior Algorithm Engineer at Bytedance - TikTok (字节跳动)
+                      Senior Algorithm Engineer at Samsung Research (South Korea)
                     </p>
                   </div>
                   <div>
                     <span className="font-semibold">Key Achievement:</span>
                     <p className="text-sm text-muted-foreground">
-                      Developed recommendation algorithm for Douyin (TikTok) resulting in 5% increase in user engagement
+                      Developed AI models for Samsung's Bixby voice assistant, improving accuracy by 15%
                     </p>
                   </div>
                 </div>
@@ -361,13 +361,12 @@ export default function BravoZoomLanding() {
                 <div className="space-y-3 mb-6">
                   <div>
                     <span className="font-semibold">Prev. Employer:</span>
-                    <p className="text-sm text-muted-foreground">Principal Engineer at Tencent (腾讯) - WeChat Pay</p>
+                    <p className="text-sm text-muted-foreground">Principal Engineer at Grab (Singapore) - Payments Platform</p>
                   </div>
                   <div>
                     <span className="font-semibold">Key Achievement:</span>
                     <p className="text-sm text-muted-foreground">
-                      Led team of 12 engineers for core payment processing gateway, handling billions of transactions per
-                      year
+                      Led team of 15 engineers for Southeast Asia's largest fintech platform, processing $2B+ annually
                     </p>
                   </div>
                 </div>
@@ -423,8 +422,8 @@ export default function BravoZoomLanding() {
                 Beyond the Obvious
               </h3>
               <p className="text-muted-foreground group-hover:text-foreground transition-colors duration-300">
-                We don't just search on LinkedIn. We leverage our deep, on-the-ground network within the Chinese tech
-                ecosystem—targeting talent from world-class companies like Bytedance, Alibaba, and Tencent.
+                We don't just search on LinkedIn. We leverage our deep, on-the-ground network across the Asian tech
+                ecosystem—targeting talent from world-class companies like Bytedance, Alibaba, Tencent, Samsung, and Grab.
               </p>
             </div>
 
@@ -509,7 +508,7 @@ export default function BravoZoomLanding() {
                   <h3 className="text-2xl font-bold">Finder's Fee Recruitment</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">
-                  Our core service. For a one-time placement fee, we run our full, end-to-end vetting process to find you the perfect candidate. This is ideal for companies that have their own method for international payroll but need a specialist to find elite talent.
+                  Our core service. For a one-time placement fee, we run our full, end-to-end vetting process to find you the perfect candidate across Asia. This is ideal for companies that have their own method for international payroll but need a specialist to find elite talent.
                 </p>
                 <Button 
                   className="w-full hover:scale-105 transition-transform duration-300"
@@ -527,7 +526,7 @@ export default function BravoZoomLanding() {
                   <h3 className="text-2xl font-bold">"Keeper" EOR & Payroll</h3>
                 </div>
                 <p className="text-muted-foreground mb-6">
-                  Need a simple way to compliantly employ your new hire in China? Our optional 'Keeper' service handles all the complex cross-border payroll and legal logistics for a simple monthly fee. You get one invoice; we handle the rest.
+                  Need a simple way to compliantly employ your new hire across Asia? Our optional 'Keeper' service handles all the complex cross-border payroll and legal logistics for a simple monthly fee. You get one invoice; we handle the rest.
                 </p>
                 <Button 
                   variant="outline" 
@@ -548,7 +547,7 @@ export default function BravoZoomLanding() {
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Talent is Global. Opportunity Should Be Too.</h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
             Bravo Zoom's mission is to build the bridge between the world's most ambitious founders and the elite,
-            untapped engineering talent in China. We exist to help you build a world-class team, faster and smarter than
+            untapped engineering talent across Asia. We exist to help you build a world-class team, faster and smarter than
             you thought possible. We are not just finding engineers; we're building the future of work.
           </p>
         </div>
