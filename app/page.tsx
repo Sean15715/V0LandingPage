@@ -4,11 +4,22 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { Brain, Shield, Search, Users, Target, Trophy, Globe, Zap } from "lucide-react"
+import { Brain, Shield, Search, Users, Target, Trophy, Globe, Zap, CheckCircle, AlertCircle } from "lucide-react"
 import { ScrollAnimations } from "@/components/scroll-animations"
+import { useContactForm } from "@/hooks/useContactForm"
 import Image from "next/image"
 
 export default function BravoZoomLanding() {
+  const {
+    formData,
+    isLoading,
+    isSuccess,
+    error,
+    setFormData,
+    handleSubmit,
+    handleFallbackSubmit,
+  } = useContactForm();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <ScrollAnimations />
@@ -555,28 +566,97 @@ export default function BravoZoomLanding() {
 
           <Card className="bg-white border-gray-200 hover:shadow-xl transition-all duration-500 card-reveal">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              {/* Success Message */}
+              {isSuccess && (
+                <div className="mb-6 p-4 bg-green-50 border border-green-200 rounded-lg flex items-center gap-3">
+                  <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0" />
+                  <div>
+                    <p className="text-green-800 font-medium">Thank you for your interest!</p>
+                    <p className="text-green-600 text-sm">Check your email for our Calendly link to schedule your consultation.</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Error Message */}
+              {error && (
+                <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg flex items-center gap-3">
+                  <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
+                  <p className="text-red-800">{error}</p>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium mb-2">Full Name</label>
-                    <Input placeholder="John Doe" className="focus:scale-105 transition-transform duration-300" />
+                    <Input 
+                      placeholder="John Doe" 
+                      className="focus:scale-105 transition-transform duration-300" 
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      required
+                    />
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Company Name</label>
-                    <Input placeholder="Acme Inc." className="focus:scale-105 transition-transform duration-300" />
+                    <Input 
+                      placeholder="Acme Inc." 
+                      className="focus:scale-105 transition-transform duration-300" 
+                      value={formData.company}
+                      onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                      required
+                    />
                   </div>
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Work Email</label>
-                  <Input type="email" placeholder="john@acme.com" className="focus:scale-105 transition-transform duration-300" />
+                  <Input 
+                    type="email" 
+                    placeholder="john@acme.com" 
+                    className="focus:scale-105 transition-transform duration-300" 
+                    value={formData.email}
+                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                    required
+                  />
                 </div>
                 <div>
                   <label className="block text-sm font-medium mb-2">Brief Message (Optional)</label>
-                  <Textarea placeholder="Tell us about your hiring needs..." rows={4} className="focus:scale-105 transition-transform duration-300" />
+                  <Textarea 
+                    placeholder="Tell us about your hiring needs..." 
+                    rows={4} 
+                    className="focus:scale-105 transition-transform duration-300" 
+                    value={formData.message}
+                    onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  />
                 </div>
-                <Button size="lg" className="w-full text-lg py-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300">
-                  Schedule My Consultation
-                </Button>
+                <div className="space-y-3">
+                  <Button 
+                    type="submit"
+                    size="lg" 
+                    className="w-full text-lg py-6 hover:scale-105 hover:shadow-lg hover:shadow-primary/25 transition-all duration-300"
+                    disabled={isLoading}
+                  >
+                    {isLoading ? (
+                      <div className="flex items-center gap-2">
+                        <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        Sending...
+                      </div>
+                    ) : (
+                      "Schedule My Consultation"
+                    )}
+                  </Button>
+                  
+                  <Button 
+                    type="button"
+                    variant="outline"
+                    size="lg" 
+                    className="w-full text-lg py-6 hover:scale-105 transition-all duration-300"
+                    onClick={handleFallbackSubmit}
+                    disabled={isLoading}
+                  >
+                    Send via Email Client
+                  </Button>
+                </div>
               </form>
             </CardContent>
           </Card>
