@@ -461,6 +461,15 @@ export default function BravoZoomLanding() {
               
               <CardContent className="p-8">
                 <div className="mb-6">
+                  <div className="flex justify-center mb-4">
+                    <Image 
+                      src="/candidates_pics/Senior Full-Stack Engineer.jpg" 
+                      alt="Senior Full-Stack Engineer" 
+                      width={80} 
+                      height={80} 
+                      className="rounded-full object-cover border-2 border-primary/20"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold mb-2">Senior Full-Stack Engineer</h3>
                   <p className="text-primary font-semibold">8 Years Experience</p>
                 </div>
@@ -515,6 +524,15 @@ export default function BravoZoomLanding() {
             >
               <CardContent className="p-8">
                 <div className="mb-6">
+                  <div className="flex justify-center mb-4">
+                    <Image 
+                      src="/candidates_pics/ML Engineer.jpg" 
+                      alt="Senior AI/ML Engineer" 
+                      width={80} 
+                      height={80} 
+                      className="rounded-full object-cover border-2 border-primary/20"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold mb-2">Senior AI/ML Engineer</h3>
                   <p className="text-primary font-semibold">6 Years Experience</p>
                 </div>
@@ -568,6 +586,15 @@ export default function BravoZoomLanding() {
             >
               <CardContent className="p-8">
                 <div className="mb-6">
+                  <div className="flex justify-center mb-4">
+                    <Image 
+                      src="/candidates_pics/ Engineering Manager.jpg" 
+                      alt="Tech Lead / Engineering Manager" 
+                      width={80} 
+                      height={80} 
+                      className="rounded-full object-cover border-2 border-primary/20"
+                    />
+                  </div>
                   <h3 className="text-xl font-bold mb-2">Tech Lead / Engineering Manager</h3>
                   <p className="text-primary font-semibold">10+ Years Experience</p>
                 </div>
