@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Brain, Shield, Search, Users, Target, Trophy, Globe, Zap, CheckCircle, AlertCircle } from "lucide-react"
 import { ScrollAnimations } from "@/components/scroll-animations"
+import { Navigation } from "@/components/navigation"
 import { useContactForm } from "@/hooks/useContactForm"
 import Image from "next/image"
 
@@ -22,6 +23,7 @@ export default function BravoZoomLanding() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      <Navigation />
       <ScrollAnimations />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden hero-section bg-white">
@@ -374,7 +376,7 @@ export default function BravoZoomLanding() {
       </section>
 
       {/* Why Bravo Zoom Section */}
-      <section className="py-20 px-6 scroll-reveal">
+      <section id="why-us" className="py-20 px-6 scroll-reveal">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">The Unfair Advantage for Scaling Your Team</h2>
@@ -436,7 +438,7 @@ export default function BravoZoomLanding() {
       </section>
 
       {/* Our Talent Section */}
-      <section className="py-20 px-6 bg-gray-50 scroll-reveal">
+      <section id="our-talent" className="py-20 px-6 bg-gray-50 scroll-reveal">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Access the Top 2% of Global Engineering Talent</h2>
@@ -678,7 +680,7 @@ export default function BravoZoomLanding() {
       </section>
 
       {/* Our Process Section */}
-      <section className="py-20 px-6 scroll-reveal">
+      <section id="our-process" className="py-20 px-6 scroll-reveal">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Our Vetting Process: A Holistic Approach</h2>
@@ -777,7 +779,7 @@ export default function BravoZoomLanding() {
       </section>
 
       {/* Our Services Section */}
-      <section className="py-20 px-6 bg-gray-50 scroll-reveal">
+      <section id="our-services" className="py-20 px-6 bg-gray-50 scroll-reveal">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">Simple, Transparent Models for a Modern Partnership</h2>
@@ -825,7 +827,7 @@ export default function BravoZoomLanding() {
       </section>
 
       {/* Mission Section */}
-      <section className="py-20 px-6 scroll-reveal">
+      <section id="mission" className="py-20 px-6 scroll-reveal">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-8">Talent is Global. Opportunity Should Be Too.</h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
