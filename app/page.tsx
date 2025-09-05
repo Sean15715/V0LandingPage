@@ -446,6 +446,41 @@ export default function BravoZoomLanding() {
             </p>
           </div>
 
+          {/* Key Differentiators */}
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <Card className="bg-white border-gray-200 hover:border-primary/50 transition-all duration-500 group hover:scale-105 hover:shadow-xl card-reveal">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-green-200 group-hover:shadow-lg group-hover:shadow-green-200/25 transition-all duration-300">
+                    <Globe className="w-8 h-8 text-green-600 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-center group-hover:text-primary transition-colors duration-300">
+                  Native-Level English Fluency
+                </h3>
+                <p className="text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Every candidate undergoes rigorous English communication assessment. They can seamlessly integrate with your US team, participate in complex technical discussions, and deliver presentations with confidence.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white border-gray-200 hover:border-primary/50 transition-all duration-500 group hover:scale-105 hover:shadow-xl card-reveal">
+              <CardContent className="p-8">
+                <div className="mb-6">
+                  <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 group-hover:shadow-lg group-hover:shadow-blue-200/25 transition-all duration-300">
+                    <Zap className="w-8 h-8 text-blue-600 group-hover:scale-125 group-hover:rotate-12 transition-all duration-300" />
+                  </div>
+                </div>
+                <h3 className="text-2xl font-bold mb-4 text-center group-hover:text-primary transition-colors duration-300">
+                  Western Tech Stack Expertise
+                </h3>
+                <p className="text-muted-foreground text-center leading-relaxed group-hover:text-foreground transition-colors duration-300">
+                  Proficient in the same technologies powering Silicon Valley: Next.js, React, Node.js, TypeScript, PostgreSQL, AWS, Docker, Kubernetes, and more. Ready to contribute from day one.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-8">
             {/* Profile Card 1 */}
             <Card
