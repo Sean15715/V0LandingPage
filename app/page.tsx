@@ -63,9 +63,9 @@ export default function BravoZoomLanding() {
               <path
                 d="M 15 40 Q 50 20 80 40"
                 stroke="rgb(37 99 235)"
-                strokeWidth="2"
+                strokeWidth="0.8"
                 fill="none"
-                className="connection-pulse connection-glow"
+                className="connection-pulse connection-glow flight-path"
                 opacity="0.9"
                 filter="drop-shadow(0 0 6px rgba(37, 99, 235, 0.4))"
               />
@@ -74,9 +74,9 @@ export default function BravoZoomLanding() {
               <path
                 d="M 15 40 Q 50 60 80 40"
                 stroke="rgb(59 130 246)"
-                strokeWidth="1.5"
+                strokeWidth="0.6"
                 fill="none"
-                className="connection-flow connection-delay-1"
+                className="connection-flow connection-delay-1 flight-path"
                 opacity="0.7"
                 filter="drop-shadow(0 0 4px rgba(59, 130, 246, 0.3))"
               />
@@ -85,9 +85,9 @@ export default function BravoZoomLanding() {
               <path
                 d="M 15 40 Q 35 10 25 25"
                 stroke="rgb(99 102 241)"
-                strokeWidth="1.5"
+                strokeWidth="0.6"
                 fill="none"
-                className="connection-pulse connection-delay-2"
+                className="connection-pulse connection-delay-2 flight-path"
                 opacity="0.8"
                 filter="drop-shadow(0 0 5px rgba(99, 102, 241, 0.4))"
               />
@@ -97,9 +97,9 @@ export default function BravoZoomLanding() {
               <path
                 d="M 20 35 Q 50 5 75 45"
                 stroke="rgb(37 99 235)"
-                strokeWidth="1"
+                strokeWidth="0.5"
                 fill="none"
-                className="connection-flow connection-delay-4"
+                className="connection-flow connection-delay-4 flight-path"
                 opacity="0.6"
                 filter="drop-shadow(0 0 3px rgba(37, 99, 235, 0.2))"
               />
@@ -108,9 +108,9 @@ export default function BravoZoomLanding() {
               <path
                 d="M 80 40 Q 70 30 65 35"
                 stroke="rgb(59 130 246)"
-                strokeWidth="1"
+                strokeWidth="0.5"
                 fill="none"
-                className="connection-pulse connection-delay-5"
+                className="connection-pulse connection-delay-5 flight-path"
                 opacity="0.5"
                 filter="drop-shadow(0 0 3px rgba(59, 130, 246, 0.2))"
               />
@@ -119,65 +119,87 @@ export default function BravoZoomLanding() {
               <path
                 d="M 25 35 Q 40 25 55 30"
                 stroke="rgb(99 102 241)"
-                strokeWidth="1"
+                strokeWidth="0.4"
                 fill="none"
-                className="connection-flow connection-delay-6"
+                className="connection-flow connection-delay-6 flight-path"
                 opacity="0.4"
                 filter="drop-shadow(0 0 2px rgba(99, 102, 241, 0.15))"
               />
               
-              <path
-                d="M 70 45 Q 60 50 55 55"
-                stroke="rgb(139 92 246)"
-                strokeWidth="1"
-                fill="none"
-                className="connection-pulse connection-delay-1"
-                opacity="0.4"
-                filter="drop-shadow(0 0 2px rgba(139, 92, 246, 0.15))"
-              />
+              {/* Removed Africa connection line as requested */}
               
-              {/* Animated flowing dots along main connection */}
+              {/* Aircraft-like flowing points along main routes */}
               <circle
-                r="1"
+                r="0.8"
                 fill="rgb(37 99 235)"
-                opacity="0.8"
+                opacity="0.9"
                 className="data-flow"
-                filter="drop-shadow(0 0 4px rgba(37, 99, 235, 0.6))"
+                filter="drop-shadow(0 0 6px rgba(37, 99, 235, 0.8))"
               >
                 <animateMotion
-                  dur="4s"
+                  dur="6s"
                   repeatCount="indefinite"
                   path="M 15 40 Q 50 20 80 40"
                 />
               </circle>
               
-              {/* Secondary flowing dots */}
+              {/* Secondary aircraft trail */}
               <circle
-                r="0.8"
+                r="0.6"
                 fill="rgb(99 102 241)"
-                opacity="0.6"
+                opacity="0.7"
                 className="data-flow connection-delay-2"
-                filter="drop-shadow(0 0 3px rgba(99, 102, 241, 0.4))"
+                filter="drop-shadow(0 0 4px rgba(99, 102, 241, 0.6))"
               >
                 <animateMotion
-                  dur="5s"
+                  dur="7s"
                   repeatCount="indefinite"
                   path="M 15 40 Q 50 60 80 40"
                 />
               </circle>
               
-              {/* Additional flowing data points */}
+              {/* Europe route aircraft */}
               <circle
-                r="0.6"
+                r="0.5"
                 fill="rgb(139 92 246)"
-                opacity="0.5"
+                opacity="0.6"
                 className="data-flow connection-delay-3"
-                filter="drop-shadow(0 0 2px rgba(139, 92, 246, 0.3))"
+                filter="drop-shadow(0 0 3px rgba(139, 92, 246, 0.5))"
               >
                 <animateMotion
-                  dur="6s"
+                  dur="5s"
                   repeatCount="indefinite"
                   path="M 15 40 Q 35 10 25 25"
+                />
+              </circle>
+              
+              {/* Additional cross-pacific aircraft */}
+              <circle
+                r="0.4"
+                fill="rgb(37 99 235)"
+                opacity="0.5"
+                className="data-flow connection-delay-4"
+                filter="drop-shadow(0 0 2px rgba(37, 99, 235, 0.4))"
+              >
+                <animateMotion
+                  dur="8s"
+                  repeatCount="indefinite"
+                  path="M 20 35 Q 50 5 75 45"
+                />
+              </circle>
+              
+              {/* Asia-Middle East route */}
+              <circle
+                r="0.3"
+                fill="rgb(59 130 246)"
+                opacity="0.4"
+                className="data-flow connection-delay-5"
+                filter="drop-shadow(0 0 2px rgba(59, 130, 246, 0.3))"
+              >
+                <animateMotion
+                  dur="4s"
+                  repeatCount="indefinite"
+                  path="M 80 40 Q 70 30 65 35"
                 />
               </circle>
             </svg>

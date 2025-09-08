@@ -370,30 +370,49 @@
     animation: float 3s ease-in-out infinite;
   }
 
-  /* Global Connection Network Animations */
+  /* Global Connection Network Animations - Enhanced for Flight-like Effect */
   @keyframes connectionPulse {
     0%, 100% {
       opacity: 0.6;
-      stroke-width: 1.5;
+      stroke-width: 0.8;
     }
     50% {
       opacity: 1;
-      stroke-width: 2.5;
+      stroke-width: 1.2;
     }
   }
 
   @keyframes connectionFlow {
     0% {
-      stroke-dasharray: 0 100;
+      stroke-dasharray: 8 12;
       stroke-dashoffset: 0;
     }
+    100% {
+      stroke-dasharray: 8 12;
+      stroke-dashoffset: -20;
+    }
+  }
+
+  @keyframes flightPath {
+    0% {
+      stroke-dasharray: 6 14;
+      stroke-dashoffset: 0;
+      opacity: 0.4;
+    }
+    25% {
+      opacity: 0.8;
+    }
     50% {
-      stroke-dasharray: 50 50;
-      stroke-dashoffset: -25;
+      opacity: 1;
+      stroke-width: 1;
+    }
+    75% {
+      opacity: 0.8;
     }
     100% {
-      stroke-dasharray: 0 100;
-      stroke-dashoffset: -100;
+      stroke-dasharray: 6 14;
+      stroke-dashoffset: -20;
+      opacity: 0.4;
     }
   }
 
@@ -409,15 +428,38 @@
   @keyframes dataFlow {
     0% {
       opacity: 0;
-      transform: scale(0.5);
+      transform: scale(0.3);
     }
-    50% {
+    20% {
       opacity: 1;
-      transform: scale(1.2);
+      transform: scale(1);
+    }
+    80% {
+      opacity: 1;
+      transform: scale(1.1);
     }
     100% {
       opacity: 0;
-      transform: scale(0.8);
+      transform: scale(0.3);
+    }
+  }
+
+  @keyframes aircraftTrail {
+    0% {
+      opacity: 0;
+      transform: scale(0.5) rotate(0deg);
+    }
+    10% {
+      opacity: 0.8;
+      transform: scale(1) rotate(3deg);
+    }
+    90% {
+      opacity: 0.8;
+      transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+      opacity: 0;
+      transform: scale(0.5) rotate(0deg);
     }
   }
 
@@ -447,23 +489,30 @@
     }
   }
 
-  /* Connection line animations */
+  /* Connection line animations - Enhanced for Flight Experience */
   .connection-pulse {
-    animation: connectionPulse 3s ease-in-out infinite;
+    animation: connectionPulse 2.5s ease-in-out infinite;
   }
 
   .connection-flow {
-    stroke-dasharray: 5 5;
-    animation: connectionFlow 4s linear infinite;
+    stroke-dasharray: 8 12;
+    animation: connectionFlow 3s linear infinite;
+  }
+
+  .flight-path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    animation: flightPath 4s ease-in-out infinite;
+    filter: brightness(1.2) contrast(1.1);
   }
 
   .connection-glow {
     animation: connectionGlow 2s ease-in-out infinite;
   }
 
-  /* Data flow animations */
+  /* Data flow animations - Aircraft-like movement */
   .data-flow {
-    animation: dataFlow 3s ease-in-out infinite;
+    animation: aircraftTrail 5s ease-in-out infinite;
   }
 
   /* City marker animations */
